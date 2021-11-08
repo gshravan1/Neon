@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-home',
@@ -6,16 +7,20 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./home.component.scss']
 })
 
+
 export class HomeComponent implements OnInit {
-    model = {
-        left: true,
-        middle: false,
-        right: false
-    };
+    angForm: FormGroup;
 
-    focus;
-    focus1;
-    constructor() { }
+constructor(private fb: FormBuilder) {
+    this.createForm();
+ }
 
-    ngOnInit() {}
+ngOnInit() {}
+
+createForm() {
+    this.angForm = this.fb.group({
+       email: ['', Validators.required ]
+    });
+  }
+
 }

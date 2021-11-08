@@ -5,8 +5,33 @@
 }
 
 .card {
-    height: 580px;
+    height: 625px;
 }
+
+.container-fluid {
+    margin-top: 5px;
+}
+
+.sign {
+    padding-left: 50px;
+    padding-top: 20px;
+    color: white;
+}
+
+button {
+    font-size: 15px;
+}
+
+.input-group {
+    border: 1px solid gray;
+}
+
+.form-group input{
+    border-color: black;
+    border-radius: 5px;
+}
+
+/*
 
 .input-group {
     height: 50px;
@@ -16,3 +41,4 @@
 input[type=chechbox] {
     border: 1px solid blue;
 }
+*/

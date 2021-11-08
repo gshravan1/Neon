@@ -1,21 +1,20 @@
 <section class="section section-shaped section-lg">
   <div class="shape shape-style-1 bg-gradient-default">
-  <!--  <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    <span></span> -->
+    <span></span>
+    <span></span>
   </div>
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-lg-18">
         <div class="row row-grid">
             <div class="card border-0" style="float: right; width: 660px;">
-              <div class="card-body py-4">
-              
+              <div class="card-body py-4"> 
             </div>
             </div>
     
@@ -25,6 +24,116 @@
                 <div class="text-center mb-3">
                   <small>Sign up</small>
                 </div>
+
+                <form [formGroup]="angForm" novalidate>
+                  
+                  <div class="form-group">
+                      <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                      </div>
+                      <input class="form-control" formControlName="name" placeholder="Name" type="text">
+                      </div>
+                  </div>
+                  <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+                      <div *ngIf="angForm.controls['name'].errors.required">
+                        Name is required.
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input class="form-control" formControlName="email" placeholder="Email" type="text">
+                    </div>
+                </div>
+                <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['email'].errors.required">
+                      Email is required
+                    </div>
+                </div>
+
+                   <div class="form-group">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                        </div>
+                      <input class="form-control" formControlName="password" placeholder="Password" type="password">
+                      </div>
+                  </div>
+                  <div *ngIf="angForm.controls['password'].invalid && (angForm.controls['password'].dirty || angForm.controls['password'].touched)" class="alert alert-danger">
+                      <div *ngIf="angForm.controls['password'].errors.required">
+                        Password is required
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group input-group-alternative">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                      </div>
+                    <input class="form-control" formControlName="password1" placeholder="Confirm Password" type="password">
+                    </div>
+                </div>
+                <div *ngIf="angForm.controls['password1'].invalid && (angForm.controls['password1'].dirty || angForm.controls['password1'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['password1'].errors.required">
+                      Password is required
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                    </div>
+                  <input class="form-control" formControlName="date" placeholder="Date of Birth" type="date">
+                  </div>
+              </div>
+              <div *ngIf="angForm.controls['date'].invalid && (angForm.controls['date'].dirty || angForm.controls['date'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['date'].errors.required">
+                    Date of Birth is required
+                  </div>
+              </div>
+
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                    </div>
+                  <input class="form-control" formControlName="phone" placeholder="Phone Number" type="text">
+                  </div>
+              </div>
+              <div *ngIf="angForm.controls['phone'].invalid && (angForm.controls['phone'].dirty || angForm.controls['phone'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['phone'].errors.required">
+                    Phonenumber is required
+                  </div>
+              </div>
+        
+                  <div class="text-success font-italic">
+                    <small>password strength:
+                      <span class="text-success font-weight-700"></span>
+                    </small>
+                  </div>
+                  <div class="row my-2" style="padding-left: 40px">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled">
+                    <label class="form-check-label" for="flexCheckDisabled">
+                      <span>I agree with the
+                        <a href="javascript:void(0)">Privacy Policy</a>
+                      </span>
+                    </label>
+                  </div>
+                  
+                  <div class="sign">
+                  <button type="submit"
+                      [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary">
+                      Create Account
+                  </button>
+                  </div>
+            </form>
+
+                <!--
                 <form role="form">
                   <div class="form-group" [ngClass]="{'focused':focus===true}">
                     <div class="input-group input-group-alternative mb-3">
@@ -66,6 +175,7 @@
                       <input class="form-control" placeholder="Phone Number" type="text" (focus)="focus4=true" (blur)="focus4=false">
                     </div>
                   </div>
+            
                   <div class="text-success font-italic">
                     <small>password strength:
                       <span class="text-success font-weight-700"></span>
@@ -79,23 +189,12 @@
                       </span>
                     </label>
                   </div>
-                  <!--
-                  <div class="row my-4">
-                    <div class="col-12">
-                      <div class="custom-control custom-control-alternative custom-checkbox">
-                        <input class="custom-control-input" id="customCheckRegister" type="checkbox">
-                        <label class="custom-control-label" for="customCheckRegister">
-                          <span>I agree with the
-                            <a href="javascript:void(0)">Privacy Policy</a>
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                  </div> -->
+
                   <div class="text-center">
                     <button type="button" class="btn btn-primary mt-4">Create account</button>
                   </div>
                 </form>
+              -->
               </div>
             </div>
           </div>
@@ -104,7 +203,6 @@
     </div>
   </div>
 </section>
-
 
 
 <!--

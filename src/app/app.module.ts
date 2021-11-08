@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
@@ -18,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuestionsComponent } from './questions/questions.component';
+import { ValidationComponent } from './validation/validation.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import { QuestionsComponent } from './questions/questions.component';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    ValidationComponent
   ],
   
   imports: [
     BrowserModule,
     NgbModule,
+    ReactiveFormsModule,
     FormsModule,
     RouterModule,
     AppRoutingModule,

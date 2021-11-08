@@ -16,30 +16,69 @@
             <div class="card bg-secondary shadow border-0">
               <div class="card-body px-lg-4 py-lg-4">
                 <form role="form">
-                  <div class="dropdown">
-                    <button onclick="myFunction()" type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Security Question: 1
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" onkeyup="filterFunction()">
-                      <a class="dropdown-item" href="#">Security Question 1</a>
-                      <a class="dropdown-item" href="#">Security Question 2</a>
-                      <a class="dropdown-item" href="#">Security Question 3</a>
-                    </div>
+                  <div class="text-center mb-3">
+                    <small style="font-weight: bolder;">Choose new security questions and answers <br> to recover your account</small>
+                  </div>
+                    <div class="select">
+                    <select id="standard-select">
+                      <option value="Option 1">Security Question 1</option>
+                      <option value="Option 1">What city were you born in?</option>
+                      <option value="Option 2">Where did you go to high school/college?</option>
+                      <option value="Option 3">What was the name of your first/current/favorite pet?</option>
+                      <option value="Option 4">What is your mother’s maiden name?</option>
+                      <option value="Option 5">What was the first company that you worked for?</option>
+                    </select>
+                    <span class="focus"></span>
                   </div>
 
                   <div class="input-container">
                     <input class="input-field" type="text" placeholder="Answer" name="Answer">
                   </div>
 
+                  <div class="select">
+                    <select id="standard-select">
+                      <option value="Option 1">Security Question 2</option>
+                      <option value="Option 2">Where did you go to high school/college?</option>
+                      <option value="Option 3">What was the name of your first/current/favorite pet?</option>
+                      <option value="Option 4">What is your mother’s maiden name?</option>
+                      <option value="Option 5">What was the first company that you worked for?</option>
+                    </select>
+                    <span class="focus"></span>
+                  </div>
+
+                  <!--
                   <div class="dropdown">
-                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">Security Question: 2
-                    </button>
-                    <div class="dropdown-menu">
+                    <button onclick="myFunction()" class="dropbtn">Security Question 2</button>
+                    <div id="myDropdown" class="dropdown-content">
                       <a class="dropdown-item" href="#">Security Question 1</a>
                       <a class="dropdown-item" href="#">Security Question 2</a>
                       <a class="dropdown-item" href="#">Security Question 3</a>
                     </div>
                   </div>
+                -->
 
+                  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+                  <script>
+                    /* When the user clicks on the button, 
+                    toggle between hiding and showing the dropdown content */
+                    function myFunction() {
+                      document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    
+                    // Close the dropdown if the user clicks outside of it
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                    </script>
                   <div class="input-container">
                     <input class="input-field" type="text" placeholder="Answer" name="Answer">
                   </div>
