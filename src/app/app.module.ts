@@ -20,6 +20,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuestionsComponent } from './questions/questions.component';
 import { ValidationComponent } from './validation/validation.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ValidationComponent } from './validation/validation.component';
     FooterComponent,
     LoginComponent,
     QuestionsComponent,
-    ValidationComponent
+    ValidationComponent,
+    ContactusComponent,
+    SettingsComponent
   ],
   
   imports: [
