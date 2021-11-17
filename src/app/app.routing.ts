@@ -10,7 +10,6 @@ import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { ValidationComponent } from './validation/validation.component';
-import { ContactusComponent } from './contactus/contactus.component';
 import { SettingsComponent } from './settings/settings.component';
 
 
@@ -22,7 +21,6 @@ const routes: Routes =[
     { path: 'login',            component: ValidationComponent },
     { path: 'signup',           component: SignupComponent },
     { path: 'questions',        component: QuestionsComponent },
-    { path: 'contactus',        component: ContactusComponent},
     { path: 'profile settings', component: SettingsComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
