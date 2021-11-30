@@ -22,6 +22,8 @@ import { QuestionsComponent } from './questions/questions.component';
 import { ValidationComponent } from './validation/validation.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { SettingsComponent } from './settings/settings.component';
+import { PrivacyComponent } from './settings/privacy/privacy.component';
+import { MyaccountComponent } from './settings/myaccount/myaccount.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { SettingsComponent } from './settings/settings.component';
     QuestionsComponent,
     ValidationComponent,
     ContactusComponent,
-    SettingsComponent
+    SettingsComponent,
+    PrivacyComponent,
+    MyaccountComponent
   ],
   
   imports: [

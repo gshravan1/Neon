@@ -12,6 +12,8 @@ import { QuestionsComponent } from './questions/questions.component';
 import { ValidationComponent } from './validation/validation.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { SettingsComponent } from './settings/settings.component';
+import { MyaccountComponent } from './settings/myaccount/myaccount.component';
+import { PrivacyComponent } from './settings/privacy/privacy.component';
 
 
 const routes: Routes =[
@@ -24,6 +26,8 @@ const routes: Routes =[
     { path: 'questions',        component: QuestionsComponent },
     { path: 'contactus',        component: ContactusComponent},
     { path: 'profile settings', component: SettingsComponent},
+    { path: 'myaccount',        component: MyaccountComponent},
+    { path: 'privacy settings', component: PrivacyComponent},
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

@@ -1,0 +1,55 @@
+.container {
+    margin-top: 5px;
+    padding-bottom: 74px;
+}
+
+.input-group {
+    border: 1px solid gray;
+    margin-top: 20px;
+}
+
+.form-group {
+    border-color: black;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.btn {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: gray;
+}
+
+.form-control {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 320px;
+}
+
+.form-inline {
+    margin-top: 40px;
+}
+
+.buttons {
+    margin: 10px 10px 10px;
+}
+
+select {
+    // A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid gray;
+    margin: 0;
+    cursor: inherit;
+    border-radius: 5px;
+}
+
+.select {
+    grid-template-areas: "select";
+    border: 1px solid gray ;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
