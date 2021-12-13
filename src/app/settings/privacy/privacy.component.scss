@@ -28,28 +28,42 @@
     width: 320px;
 }
 
-.form-inline {
-    margin-top: 40px;
-}
-
 .buttons {
     margin: 10px 10px 10px;
 }
 
 select {
-    // A reset of styles, including removing the default dropdown arrow
-    appearance: none;
-    background-color: transparent;
-    border: 1px solid gray;
-    margin: 0;
-    cursor: inherit;
-    border-radius: 5px;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  width: 300px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
 }
 
 .select {
-    grid-template-areas: "select";
-    border: 1px solid gray ;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
+  display: grid;
+  grid-template-areas: "select";
+
+  select,
+  &::after {
+    grid-area: select;
+  }
+
+
+  border: 1px solid gray ;
+  border-radius: 0.25rem;
+  padding: 0.65rem 0.5rem;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  // Optional styles
+  // remove for transparency
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
